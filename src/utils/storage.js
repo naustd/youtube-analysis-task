@@ -2,9 +2,8 @@ const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
 
+const uploadsDir = path.join(__dirname, "../../public/uploads/transcripts");
 async function saveTranscript(data, id) {
-  const uploadsDir = path.join(__dirname, "../../public/uploads/transcripts");
-
   // Ensure the uploads directory exists
   fs.mkdirSync(uploadsDir, { recursive: true });
   try {

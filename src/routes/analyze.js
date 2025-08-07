@@ -3,7 +3,8 @@ const router = express.Router();
 const { takeScreenshot } = require("../services/screenshot");
 const { downloadAndConvertAudio } = require("../services/downloader");
 const { transcribeAudio } = require("../services/transcription");
-// const { saveTranscript } = require("../utils/storage");
+const { analyzeWithGPTZero } = require("../services/gptzero");
+const { saveTranscript } = require("../utils/storage");
 const { generateId } = require("../utils/idGenerator");
 
 router.post("/", async (req, res, next) => {
@@ -25,25 +26,25 @@ router.post("/", async (req, res, next) => {
       youtubeUrl,
       requestId
     );
-
+    const audioPath = absolutePath;
     // Step 3: Transcribe with ElevenLabs
     let transcript = await transcribeAudio(publicPath, requestId);
     console.log("Transcript", transcript);
 
-    // // Step 4: Analyze with GPTZero
-    // transcript = await analyzeWithGPTZero(transcript, requestId);
+    // Step 4: Analyze with GPTZero
+    transcript = await analyzeWithGPTZero(transcript, requestId);
 
     // Step 5: Save all results
-    // const result = {
-    //   id: requestId,
-    //   youtubeUrl,
-    //   screenshotPath,
-    //   audioPath,
-    //   transcript,
-    //   createdAt: new Date().toISOString(),
-    // };
+    const result = {
+      id: requestId,
+      youtubeUrl,
+      screenshotPath,
+      audioPath,
+      transcript,
+      createdAt: new Date().toISOString(),
+    };
 
-    // await saveTranscript(result, requestId);
+    await saveTranscript(result, requestId);
 
     res.status(200).json({
       status: "processing",

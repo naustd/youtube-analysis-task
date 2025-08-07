@@ -31,7 +31,7 @@ async function transcribeAudio(audioPath, requestId) {
     };
 
     const response = await axios.post(
-      "https://api.elevenlabs.io/v1/speech-to-text", // ✅ fixed endpoint
+      "https://api.elevenlabs.io/v1/speech-to-text",
       form,
       {
         headers,

@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const analyzeRouter = require("./routes/analyze");
-// const resultRouter = require("./routes/result");
+const resultRouter = require("./routes/results");
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 // // Routes
 app.use("/analyze", analyzeRouter);
-// app.use("/result", resultRouter);
+app.use("/result", resultRouter);
 
 // Health check
 app.get("/", (req, res) => {
