@@ -45,7 +45,7 @@ Submit a YouTube URL to begin analysis.
 
 ### Sample Output From Postman -- Post
 
-## ![Post](https://drive.google.com/file/d/1dfCioowwFIWjG3D7jbadRhuHMdT-A3SJ/view?usp=sharing)
+<img src="https://drive.google.com/file/d/1dfCioowwFIWjG3D7jbadRhuHMdT-A3SJ/view?usp=sharing"/>
 
 ### GET `/result/:id`
 
