@@ -45,7 +45,7 @@ Submit a YouTube URL to begin analysis.
 
 ### Sample Output From Postman -- Post
 
-<img src="https://drive.google.com/file/d/1dfCioowwFIWjG3D7jbadRhuHMdT-A3SJ/view?usp=sharing"/>
+![post.png](output-screenshots/post.png)
 
 ### GET `/result/:id`
 
@@ -55,18 +55,23 @@ Fetch the transcription and screenshot for a given result ID.
 
 ```json
 {
-  "screenshot": "/screenshots/55bc2f21-2c42-449c-abb3-18cffe45c26a.png",
+  "screenshot": "/screenshots/60eeaec7-0f1d-4212-9f22-94e203a18a3f.png",
   "transcript": [
     {
-      "text": "Hello and welcome.",
-      "start_time": "00:00:01.200",
-      "end_time": "00:00:03.000",
-      "speaker": "Speaker 1",
-      "ai_probability": 0.13
+      "text": "(intro music plays)",
+      "start": 0.099,
+      "end": 4.339,
+      "type": "audio_event",
+      "speaker_id": "speaker_0",
+      "logprob": 0
     }
   ]
 }
 ```
+
+![get1.png](output-screenshots/get1.png)
+![get2.png](output-screenshots/get2.png)
+![get3.png](output-screenshots/get3.png)
 
 ---
 
@@ -76,7 +81,7 @@ Fetch the transcription and screenshot for a given result ID.
 
 ```bash
 git clone https://github.com/naustd/youtube-analysis-task.git
-cd youtube-analysis-task
+
 ```
 
 ### 2. Install dependencies
@@ -93,8 +98,14 @@ Example `.env`:
 
 ```env
 PORT=8080
-ELEVENLABS_API_KEY=your_elevenlabs_api_key
-GPTZERO_API_KEY=your_gptzero_api_key
+ELEVENLABS_API_KEY="Enter Your API KEY"
+GPTZERO_API_KEY="Enter Your API KEY"
+```
+
+### 4. Start entire project
+
+```bash
+npm start
 ```
 
 ---
@@ -155,10 +166,6 @@ A short end-to-end demo showing video input, playback, transcription, and AI ana
 📺 [YouTube Demo Video](https://youtu.be/HTUZvl2YM4I)
 
 ---
-
-## 📄 License
-
-MIT License
 
 ---
 
