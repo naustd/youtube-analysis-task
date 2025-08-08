@@ -1,11 +1,7 @@
 ````markdown
 # 🎬 YouTube Analysis Service
 
----
-
-## This is a Node.js service that analyzes YouTube videos by capturing playback, extracting audio, transcribing speech using ElevenLabs Scribe, detecting AI-generated content with GPTZero, and returning structured results via a REST API.
-
----
+This is a Node.js service that analyzes YouTube videos by capturing playback, extracting audio, transcribing speech using ElevenLabs Scribe, detecting AI-generated content with GPTZero, and returning structured results via a REST API.
 
 ## 🔧 Features
 
@@ -67,12 +63,42 @@ Fetch the transcription and screenshot for a given result ID.
 }
 ```
 
-### Sample Output From Postman -- Post
+### Sample Output From Postman For -- Post
 
 ![post.png](output-screenshots/post.png)
+
+### Sample Output From Postman For -- Get
+
 ![get1.png](output-screenshots/get1.png)
 ![get2.png](output-screenshots/get2.png)
 ![get3.png](output-screenshots/get3.png)
+
+### Sample JSON Output
+
+```json
+{
+  "id": "60eeaec7-0f1d-4212-9f22-94e203a18a3f",
+  "youtubeUrl": "https://www.youtube.com/watch?v=DWgzHbglNIo",
+  "screenshotPath": "/uploads/screenshots/60eeaec7-0f1d-4212-9f22-94e203a18a3f.png",
+  "audioPath": "/uploads/audio/60eeaec7-0f1d-4212-9f22-94e203a18a3f.wav",
+  "transcript": {
+    "language_code": "eng",
+    "language_probability": 1,
+    "text": "(intro music plays) Welcome back, aliens. My name is Naveen Reddy, and let's continue with this series of Python. Now, we have talked about what is Python and we have talked about how to install Python on your machine. It's time to start with the actual stuff, right? And we are waiting for this...",
+    "words": [
+      {
+        "text": "(intro music plays)",
+        "start": 0.099,
+        "end": 4.339,
+        "type": "audio_event",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      }
+    ]
+  },
+  "createdAt": "2025-08-08T15:37:56.753Z"
+}
+```
 
 ---
 
