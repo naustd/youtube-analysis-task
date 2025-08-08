@@ -28,7 +28,7 @@ Submit a YouTube URL to begin analysis.
 
 ```json
 {
-  "url": "https://www.youtube.com/watch?v=EXAMPLE"
+  "youtubeUrl": "https://www.youtube.com/watch?v=DWgzHbglNIo"
 }
 ```
 ````
@@ -37,11 +37,15 @@ Submit a YouTube URL to begin analysis.
 
 ```json
 {
-  "result_id": "55bc2f21-2c42-449c-abb3-18cffe45c26a"
+  "status": "processing",
+  "id": "60eeaec7-0f1d-4212-9f22-94e203a18a3f",
+  "message": "Transcription in progress. Use the ID to check results later."
 }
 ```
 
----
+### Sample Output From Postman -- Post
+
+## ![Post](https://drive.google.com/file/d/1dfCioowwFIWjG3D7jbadRhuHMdT-A3SJ/view?usp=sharing)
 
 ### GET `/result/:id`
 
@@ -146,9 +150,9 @@ docker compose up --build
 
 ## 🎥 Demo
 
-A short end-to-end demo (`≤ 90 sec`) showing video input, playback, transcription, and AI analysis is included in `/demo`.
+A short end-to-end demo showing video input, playback, transcription, and AI analysis is included.
 
-📺 [YouTube Demo Video](https://www.youtube.com/watch?v=EXAMPLE123)
+📺 [YouTube Demo Video](https://youtu.be/HTUZvl2YM4I)
 
 ---
 
