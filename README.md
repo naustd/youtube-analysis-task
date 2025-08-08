@@ -1,9 +1,9 @@
 ````markdown
 # 🎬 YouTube Analysis Service
 
-```text
-This is a Node.js service that analyzes YouTube videos by capturing playback, extracting audio, transcribing speech using ElevenLabs Scribe, detecting AI-generated content with GPTZero, and returning structured results via a REST API.
-```
+---
+
+## This is a Node.js service that analyzes YouTube videos by capturing playback, extracting audio, transcribing speech using ElevenLabs Scribe, detecting AI-generated content with GPTZero, and returning structured results via a REST API.
 
 ---
 
@@ -45,10 +45,6 @@ Submit a YouTube URL to begin analysis.
 }
 ```
 
-### Sample Output From Postman -- Post
-
-![post.png](output-screenshots/post.png)
-
 ### GET `/result/id`
 
 Fetch the transcription and screenshot for a given result ID.
@@ -71,6 +67,9 @@ Fetch the transcription and screenshot for a given result ID.
 }
 ```
 
+### Sample Output From Postman -- Post
+
+![post.png](output-screenshots/post.png)
 ![get1.png](output-screenshots/get1.png)
 ![get2.png](output-screenshots/get2.png)
 ![get3.png](output-screenshots/get3.png)
