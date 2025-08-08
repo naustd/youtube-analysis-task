@@ -47,7 +47,7 @@ Submit a YouTube URL to begin analysis.
 
 ![post.png](output-screenshots/post.png)
 
-### GET `/result/:id`
+### GET `/result/id`
 
 Fetch the transcription and screenshot for a given result ID.
 
