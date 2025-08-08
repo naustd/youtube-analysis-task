@@ -119,8 +119,9 @@ docker compose up --build
 
 ## 🧪 Sample Output
 
-- JSON: `results/55bc2f21-2c42-449c-abb3-18cffe45c26a.json`
-- Screenshot: `public/screenshots/55bc2f21-2c42-449c-abb3-18cffe45c26a.png`
+- JSON: `public/uploads/transcripts/55bc2f21-2c42-449c-abb3-18cffe45c26a.json`
+- Screenshot: `public/uploads/screenshots/55bc2f21-2c42-449c-abb3-18cffe45c26a.png`
+- audio: `public/uploads/audio/55bc2f21-2c42-449c-abb3-18cffe45c26a.wav`
 
 ---
 
@@ -128,8 +129,10 @@ docker compose up --build
 
 ```
 .
-├── public/
-│   └── screenshots/
+├── public/uploads
+│           └── screenshots/
+|           └── audio /
+|           └── transcripts /
 ├── results/
 │   └── transcripts/
 ├── src/
