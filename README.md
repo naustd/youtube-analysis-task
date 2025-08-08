@@ -1,7 +1,9 @@
 ````markdown
 # 🎬 YouTube Analysis Service
 
+```text
 This is a Node.js service that analyzes YouTube videos by capturing playback, extracting audio, transcribing speech using ElevenLabs Scribe, detecting AI-generated content with GPTZero, and returning structured results via a REST API.
+```
 
 ---
 
